@@ -1,0 +1,52 @@
+﻿生成启动时间为 2022-10-29 9:33:33。
+日志记录详细程度设置为: Normal。     1>项目“D:\project\c_cpp\lars\YLars\ylars_reporter\ylars_reporter.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“D:\project\c_cpp\lars\YLars\ylars_reporter\obj\ylars_reporter.tlog\”。
+       InitializeBuildStatus:
+         正在创建“D:\project\c_cpp\lars\YLars\ylars_reporter\obj\ylars_reporter.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       _ValidateSources:
+         正在验证源
+       _CopySources:
+         正在将源远程复制到“192.168.176.137”
+         正在将文件“D:\project\c_cpp\lars\YLars\ylars_reporter\src\store_report.cpp”复制到“/home/redxin/YLars/ylars_reporter/src/store_report.cpp”
+         正在将文件“D:\project\c_cpp\lars\YLars\ylars_reporter\src\thread_report.cpp”复制到“/home/redxin/YLars/ylars_reporter/src/thread_report.cpp”
+         正在将文件“D:\project\c_cpp\lars\YLars\ylars_reporter\src\ylars_reporter.cpp”复制到“/home/redxin/YLars/ylars_reporter/src/ylars_reporter.cpp”
+         正在将文件“D:\project\c_cpp\lars\YLars\ylars_reporter\test\report_test.cpp”复制到“/home/redxin/YLars/ylars_reporter/test/report_test.cpp”
+         正在将文件“D:\project\c_cpp\lars\YLars\ylars_reporter\include\store_report.h”复制到“/home/redxin/YLars/ylars_reporter/include/store_report.h”
+       _ValidateCompatibleRemoteArchitectures:
+         正在验证体系结构
+       _ValidateValidArchitecture:
+         正在验证体系结构
+         当前项目体系结构“x64”兼容远程系统体系结构“x64”(“x86_64”)。
+       ClCompile:
+         正在启动远程生成
+         正在编译源:
+         正在调用“g++”
+         g++ -c -x c++ /home/redxin/YLars/ylars_reporter/src/store_report.cpp -I /home/redxin/YLars/ylars_reporter/../reactor/include -I /home/redxin/YLars/ylars_reporter/../base/proto -I /home/redxin/YLars/ylars_reporter/include -g2 -gdwarf-2 -o "/home/redxin/YLars/ylars_reporter/obj/store_report.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         store_report.cpp
+         已完成编译“/home/redxin/YLars/ylars_reporter/src/store_report.cpp”
+         正在调用“g++”
+         g++ -c -x c++ /home/redxin/YLars/ylars_reporter/src/thread_report.cpp -I /home/redxin/YLars/ylars_reporter/../reactor/include -I /home/redxin/YLars/ylars_reporter/../base/proto -I /home/redxin/YLars/ylars_reporter/include -g2 -gdwarf-2 -o "/home/redxin/YLars/ylars_reporter/obj/thread_report.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         thread_report.cpp
+         已完成编译“/home/redxin/YLars/ylars_reporter/src/thread_report.cpp”
+         正在调用“g++”
+         g++ -c -x c++ /home/redxin/YLars/ylars_reporter/src/ylars_reporter.cpp -I /home/redxin/YLars/ylars_reporter/../reactor/include -I /home/redxin/YLars/ylars_reporter/../base/proto -I /home/redxin/YLars/ylars_reporter/include -g2 -gdwarf-2 -o "/home/redxin/YLars/ylars_reporter/obj/ylars_reporter.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         ylars_reporter.cpp
+         已完成编译“/home/redxin/YLars/ylars_reporter/src/ylars_reporter.cpp”
+       Link:
+         正在链接对象
+         正在调用“ld”
+         g++ -o "/home/redxin/YLars/ylars_reporter/bin/ylars_reporter" -Wl,--no-undefined -Wl,-L/home/redxin/YLars/ylars_reporter/../reactor/lib -Wl,-L/home/redxin/YLars/ylars_reporter/../base/proto -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack ~/YLars/base/proto/ylars.pb.o /home/redxin/YLars/ylars_reporter/obj/store_report.o /home/redxin/YLars/ylars_reporter/obj/thread_report.o /home/redxin/YLars/ylars_reporter/obj/ylars_reporter.o -L../base/mysql-c/lib/ -I../reactor/include/ -L../reactor/lib/ -I../base/proto/ -I./include/ -L/usr/lib64/mysql/ -ldl -lprotobuf -lreactor -lpthread -lmysqlclient
+         已完成链接，输出文件名:“/home/redxin/YLars/ylars_reporter/bin/ylars_reporter”
+         正在将文件“/home/redxin/YLars/ylars_reporter/bin/ylars_reporter”复制到“D:\project\c_cpp\lars\YLars\ylars_reporter\bin\ylars_reporter”
+         ylars_reporter.vcxproj -> D:\project\c_cpp\lars\YLars\ylars_reporter\bin\ylars_reporter
+       FinalizeBuildStatus:
+         正在删除文件“D:\project\c_cpp\lars\YLars\ylars_reporter\obj\ylars_reporter.tlog\unsuccessfulbuild”。
+         正在对“D:\project\c_cpp\lars\YLars\ylars_reporter\obj\ylars_reporter.tlog\ylars_reporter.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\project\c_cpp\lars\YLars\ylars_reporter\ylars_reporter.vcxproj”(Rebuild 个目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:05.38
