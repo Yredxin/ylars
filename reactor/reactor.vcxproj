@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{228aed70-2a34-4cf3-b9be-e103532f1648}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>reactor</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <RemoteRootDir>~/YLars</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)lib\</OutDir>
+    <IntDir>$(ProjectDir)obj\</IntDir>
+    <RemoteIntRelDir>$(RemoteProjectRelDir)/obj/</RemoteIntRelDir>
+    <RemoteOutRelDir>$(RemoteProjectRelDir)/lib/</RemoteOutRelDir>
+    <IncludePath>.\include</IncludePath>
+    <LibraryPath>.\lib</LibraryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="include\config_file.h" />
+    <ClInclude Include="include\conn_base.h" />
+    <ClInclude Include="include\buf_pool.h" />
+    <ClInclude Include="include\epoll_base.h" />
+    <ClInclude Include="include\event_loop.h" />
+    <ClInclude Include="include\io_buf.h" />
+    <ClInclude Include="include\tcp_server.h" />
+    <ClInclude Include="include\reactor_buf.h" />
+    <ClInclude Include="include\message.h" />
+    <ClInclude Include="include\tcp_client.h" />
+    <ClInclude Include="include\tcp_conn.h" />
+    <ClInclude Include="include\thread_pool.h" />
+    <ClInclude Include="include\udp_server.h" />
+    <ClInclude Include="include\udp_client.h" />
+    <ClInclude Include="include\ylars_reactor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\thread_queue.h" />
+    <ClCompile Include="include\thread_task.h" />
+    <ClCompile Include="src\config_file.cpp" />
+    <ClCompile Include="src\message.cpp" />
+    <ClCompile Include="src\reactor_buf.cpp" />
+    <ClCompile Include="src\buf_pool.cpp" />
+    <ClCompile Include="src\event_loop.cpp" />
+    <ClCompile Include="src\io_buf.cpp" />
+    <ClCompile Include="src\tcp_server.cpp" />
+    <ClCompile Include="src\tcp_client.cpp" />
+    <ClCompile Include="src\tcp_conn.cpp" />
+    <ClCompile Include="src\thread_pool.cpp" />
+    <ClCompile Include="src\udp_server.cpp" />
+    <ClCompile Include="src\udp_client.cpp" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Verbose>true</Verbose>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
