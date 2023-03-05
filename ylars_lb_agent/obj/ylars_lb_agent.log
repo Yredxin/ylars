@@ -1,0 +1,54 @@
+﻿生成启动时间为 2022-10-31 17:31:59。
+日志记录详细程度设置为: Normal。     1>项目“D:\project\c_cpp\lars\YLars\ylars_lb_agent\ylars_lb_agent.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“D:\project\c_cpp\lars\YLars\ylars_lb_agent\obj\ylars_lb_agent.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       _ValidateSources:
+         正在验证源
+       _CopySources:
+         正在将源远程复制到“192.168.176.137”
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\host_info.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\agent_dns_client.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\agent_report_client.cpp”，因为它已是最新版本。
+         正在将文件“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\agent_server.cpp”复制到“/home/redxin/YLars/ylars_lb_agent/src/agent_server.cpp”
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\load_balance.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\route_lb.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\ylars_agent.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\include\host_info.h”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\include\agent_main.h”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\include\load_balance.h”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\include\route_lb.h”，因为它已是最新版本。
+       _ValidateCompatibleRemoteArchitectures:
+         正在验证体系结构
+       _ValidateValidArchitecture:
+         正在验证体系结构
+         当前项目体系结构“x64”兼容远程系统体系结构“x64”(“x86_64”)。
+       ClCompile:
+         正在启动远程生成
+         正在编译源:
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\host_info.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\agent_dns_client.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\agent_report_client.cpp”，因为它已是最新版本。
+         正在调用“g++”
+         g++ -c -x c++ /home/redxin/YLars/ylars_lb_agent/src/agent_server.cpp -I /home/redxin/YLars/ylars_lb_agent/../reactor/include -I /home/redxin/YLars/ylars_lb_agent/../base/proto -I /home/redxin/YLars/ylars_lb_agent/include -g2 -gdwarf-2 -o "/home/redxin/YLars/ylars_lb_agent/obj/agent_server.o" -Wall -Wswitch -W"no-deprecated-declarations" -W"empty-body" -Wconversion -W"return-type" -Wparentheses -W"no-format" -Wuninitialized -W"unreachable-code" -W"unused-function" -W"unused-value" -W"unused-variable" -O0 -fno-strict-aliasing -fno-omit-frame-pointer -fthreadsafe-statics -fexceptions -frtti -std=c++11
+         agent_server.cpp
+         已完成编译“/home/redxin/YLars/ylars_lb_agent/src/agent_server.cpp”
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\load_balance.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\route_lb.cpp”，因为它已是最新版本。
+         正在跳过“D:\project\c_cpp\lars\YLars\ylars_lb_agent\src\ylars_agent.cpp”，因为它已是最新版本。
+       Link:
+         正在链接对象
+         正在调用“ld”
+         g++ -o "/home/redxin/YLars/ylars_lb_agent/bin/ylars_lb_agent" -Wl,--no-undefined -Wl,-L/home/redxin/YLars/ylars_lb_agent/../reactor/lib -Wl,-L/home/redxin/YLars/ylars_lb_agent/../base/proto -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack ~/YLars/base/proto/ylars.pb.o /home/redxin/YLars/ylars_lb_agent/obj/host_info.o /home/redxin/YLars/ylars_lb_agent/obj/agent_dns_client.o /home/redxin/YLars/ylars_lb_agent/obj/agent_report_client.o /home/redxin/YLars/ylars_lb_agent/obj/agent_server.o /home/redxin/YLars/ylars_lb_agent/obj/load_balance.o /home/redxin/YLars/ylars_lb_agent/obj/route_lb.o /home/redxin/YLars/ylars_lb_agent/obj/ylars_agent.o -L../base/mysql-c/lib/ -I../reactor/include/ -L../reactor/lib/ -I../base/proto/ -I./include/ -L/usr/lib64/mysql/ -lreactor -lpthread -lprotobuf
+         已完成链接，输出文件名:“/home/redxin/YLars/ylars_lb_agent/bin/ylars_lb_agent”
+         正在将文件“/home/redxin/YLars/ylars_lb_agent/bin/ylars_lb_agent”复制到“D:\project\c_cpp\lars\YLars\ylars_lb_agent\bin\ylars_lb_agent”
+         ylars_lb_agent.vcxproj -> D:\project\c_cpp\lars\YLars\ylars_lb_agent\bin\ylars_lb_agent
+       FinalizeBuildStatus:
+         正在删除文件“D:\project\c_cpp\lars\YLars\ylars_lb_agent\obj\ylars_lb_agent.tlog\unsuccessfulbuild”。
+         正在对“D:\project\c_cpp\lars\YLars\ylars_lb_agent\obj\ylars_lb_agent.tlog\ylars_lb_agent.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\project\c_cpp\lars\YLars\ylars_lb_agent\ylars_lb_agent.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:03.58
