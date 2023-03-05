@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+package ylars;
+
+enum MessageId
+{
+    ID_UNKNOW               = 0;    // proto3 枚举第一位必须是0，用此项作于此处的占位
+    ID_GetRouteRequest      = 1;    // 请求host消息ID
+    ID_GetRouteResponse     = 2;    // 应答host消息ID
+    ID_ReportStatusRequest  = 3;    // 上报host信息请求消息ID
+    ID_GetHostRequest       = 4;    // API向agent请求host信息
+    ID_GetHostResponse      = 5;    // agent向API应答host信息
+    ID_ReportRequest        = 6;    // API上报调用结果
+}
+
+// 错误码
+enum LastRetCode
+{
+    RET_SUCC            = 0;    // 成功
+    RET_OVERLOAD        = 1;    // 负载
+    RET_SYSTEM_ERROR    = 2;    // 系统错误
+    RET_NOEXIST         = 3;    // 资源不存在
+}
+
+// 主机信息
+message HostInfo
+{
+    uint32 ip    = 1;
+    uint32 port  = 2;
+}
+
+// 请求dns的route消息内容
+message GetRouteRequest
+{
+    // 模块id
+    uint32 modId = 1;
+    // 模块中的业务id
+    uint32 cmdId = 2;
+}
+
+// 应答dns的route消息内容
+message GetRouteResponse
+{
+    uint32              modId = 1;
+    uint32              cmdId = 2;
+    repeated HostInfo   host = 3;
+}
+
+// 上报的其中一条主机消息
+message HostCallResult
+{
+    uint32  ip = 1;         // 主机ip
+    uint32  port = 2;       // 主机端口
+    uint32  succ = 3;       // 成功次数
+    uint32  err = 4;        // 失败次数
+    bool    overload = 5;   // 是否过载
+}
+
+// 上报的消息
+message ReportStatusReq
+{
+    uint32                  modId = 1;  // 模块id
+    uint32                  cmdId = 2;  // 功能id
+    int32                   caller = 3; // 调度者
+    repeated HostCallResult result = 4; // 主机结果集
+    uint32                  ts = 5;     // 时间
+}
+
+// API向agent请求一个主机
+message GetHostRequest
+{
+    uint32 seq          = 1;    // 校验码，确保是需要的包
+    uint32 modid        = 2;    // 请求的模块
+    uint32 cmdid        = 3;    // 请求的功能
+}
+
+// agent向API请求一个主机
+message GetHostResponse
+{
+    uint32      seq     = 1;
+    uint32      modid   = 2;
+    uint32      cmdid   = 3;
+    int32       retcode = 4;
+    HostInfo    host    = 5;
+}
+
+// API上报
+message ReportRequest
+{
+    uint32      modid   = 1;
+    uint32      cmdid   = 2;
+    HostInfo    host    = 3;
+    bool        isSucc  = 4;    // 调用是否成功
+}
